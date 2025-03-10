@@ -30,6 +30,19 @@ body {
 header h1 {
   margin: 0 20px;
 }
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-size: contain;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  height: 100px;
+  width: 100%;
+  height: auto;
+  background-image: url(images/flames.png);
+}
 header {
   z-index: 99;
   padding: 30px 0;
@@ -39,7 +52,7 @@ header {
   top: 0;
   height: 190px;
   left: 0;
-  color: white;
+  color: black;
   right: 0;
   bottom: 0;
   font-weight: 400;
@@ -49,12 +62,12 @@ header {
 nav {
   display: block;
   width: 100%;
-  color: black;
+  z-index: 99;
   position: absolute;
   bottom: 0;
   padding: 30px 10px;
   background-color: white;
-  border: 1px solid orange;
+  border-bottom: 1px solid orange;
 }
 nav li {
   position: relative;
