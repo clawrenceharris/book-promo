@@ -34,9 +34,11 @@ header::before {
   content: "";
   position: absolute;
   top: 0;
-  background-size: contain;
   bottom: 0;
+  background-size: contain;
   left: 0;
+  background-position: 0%;
+  background-repeat: no-repeat;
   z-index: -1;
   height: 100px;
   width: 100%;
@@ -84,7 +86,6 @@ nav ul {
 }
 section {
   position: relative;
-  padding: 20px;
   margin-top: 30px;
 }
 
