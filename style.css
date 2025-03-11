@@ -19,7 +19,7 @@ h1 {
 }
 h2 {
   font-size: 1.5rem;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 p {
   font-size: 1rem;
@@ -67,9 +67,11 @@ nav {
   z-index: 99;
   position: absolute;
   bottom: 0;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+
   padding: 30px 10px;
   background-color: white;
-  border-bottom: 1px solid orange;
+  border-bottom: 2px solid orange;
 }
 nav li {
   position: relative;
