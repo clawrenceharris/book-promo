@@ -11,7 +11,7 @@ html {
 }
 
 h1 {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
   text-align: center;
   font-family: "Chango", sans-serif;
@@ -20,41 +20,52 @@ h1 {
 h2 {
   font-size: 1.5rem;
   margin-bottom: 12px;
+  color: orange;
 }
-p {
-  font-size: 1rem;
-}
+
 body {
+  color: black;
+
   font-family: "Hepta Slab", sans-serif;
+}
+
+header h1:last-child {
+  transform: rotateZ(-10deg);
+  top: 110px;
+}
+
+header h1:first-child {
+  transform: rotateZ(10deg);
+  top: 30px;
+  left: -90px;
+}
+header p {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: black;
 }
 header h1 {
   margin: 0 20px;
-}
-header::before {
-  content: "";
+  background-color: rgb(255, 220, 47);
+  width: 150%;
+  transform: rotateZ(10deg);
+
   position: absolute;
-  top: 0;
-  bottom: 0;
-  background-size: contain;
-  left: 0;
-  background-position: 0%;
-  z-index: -1;
-  height: 100px;
-  width: 100%;
-  height: auto;
-  background-image: url(images/flames.png);
-  background-repeat: repeat-x;
+  left: -40px;
 }
+
 header {
   z-index: 99;
   padding: 30px 0;
-  background-color: orange;
+  background-color: rgb(241, 73, 7);
   font-family: "Gochi Hand", sans-serif;
-  position: sticky;
+  position: relative;
   top: 0;
+  overflow: hidden;
+  color: white;
   height: 190px;
   left: 0;
-  color: black;
   right: 0;
   bottom: 0;
   font-size: 1.5rem;
@@ -63,9 +74,9 @@ header {
 nav {
   display: block;
   width: 100%;
-  z-index: 99;
-  position: absolute;
-  bottom: 0;
+  z-index: 999;
+  position: sticky;
+  top: 0;
 
   padding: 30px 10px;
   background-color: white;
@@ -89,11 +100,16 @@ nav ul {
   list-style: none;
   display: flex;
 }
-
+#about h2 {
+  color: white;
+}
+#about p {
+  color: white;
+}
 #about {
+  position: relative;
   border-radius: 4px;
   padding: 50px;
-  color: white;
   background-color: deepskyblue;
 }
 section {
