@@ -81,9 +81,20 @@ nav a {
   text-decoration: none;
   color: inherit;
 }
+
+.buy-container {
+  display: flex;
+  gap: 25px;
+}
 nav ul {
   list-style: none;
   display: flex;
+}
+
+#about {
+  padding: 50px;
+  color: white;
+  background-color: deepskyblue;
 }
 section {
   position: relative;
