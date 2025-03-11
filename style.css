@@ -92,6 +92,7 @@ nav ul {
 }
 
 #about {
+  border-radius: 4px;
   padding: 50px;
   color: white;
   background-color: deepskyblue;
