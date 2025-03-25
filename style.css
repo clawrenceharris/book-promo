@@ -1,127 +1,195 @@
-@import url("https://fonts.googleapis.com/css2?family=Chango&family=Gochi+Hand&family=Hepta+Slab:wght@1..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Quicksand:wght@300..700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 html {
-  font-size: 13px;
+  font-size: 14px;
   scroll-behavior: smooth;
 }
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  text-align: center;
-  font-family: "Chango", sans-serif;
-  display: block;
-}
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-  color: orange;
+:root {
+  --primary-color: rgb(216, 11, 11);
+  --secondary-color: rgb(23, 60, 61);
+  --border: 2px lightgray solid;
 }
 
 body {
-  color: black;
-
-  font-family: "Hepta Slab", sans-serif;
+  color: lightgray;
+  background-color: black;
+  font-family: "Quicksand";
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
-header h1:last-child {
-  transform: rotateZ(-10deg);
-  top: 110px;
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  display: block;
+}
+h2 {
+  font-family: "Cairo Play";
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: red;
+  text-align: center;
+}
+h3 {
+  font-size: 1.3;
+  margin-bottom: 15px;
+}
+#tour h2 span {
+  font-size: 2.5rem;
+  font-family: "Courier New", Courier, monospace;
+}
+p {
+  font-family: "Quicksand";
+  margin-bottom: 14px;
+  font-size: 1.1rem;
 }
 
-header h1:first-child {
-  transform: rotateZ(10deg);
-  top: 30px;
-  left: -90px;
+#reviews,
+#tour,
+#buy,
+#author,
+#about {
+  border: var(--border);
 }
-header p {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: black;
+#reviews li {
+  margin-bottom: 35px;
+}
+
+#reviews em {
+  color: gray;
 }
 header h1 {
-  margin: 0 20px;
-  background-color: rgb(255, 220, 47);
-  width: 150%;
-  transform: rotateZ(10deg);
-
-  position: absolute;
-  left: -40px;
+  background-color: var(--primary-color);
+  width: 100%;
 }
-
+header span {
+  background-color: black;
+  font-family: "Cairo Play";
+  padding: 0 10px;
+}
 header {
   z-index: 99;
-  padding: 30px 0;
-  background-color: rgb(241, 73, 7);
   font-family: "Gochi Hand", sans-serif;
   position: relative;
-  top: 0;
+  height: 50vh;
+  align-items: center;
   overflow: hidden;
-  color: white;
-  height: 190px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 1.5rem;
-  font-style: normal;
+  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
+header img {
+  position: absolute;
+  bottom: -25%;
+}
+
 nav {
-  display: block;
+  display: flex;
   width: 100%;
   z-index: 999;
   position: sticky;
   top: 0;
-
-  padding: 30px 10px;
-  background-color: white;
-  border-bottom: 2px solid orange;
+  font-family: "Cormorant Garamond";
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  background-color: black;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
 }
 nav li {
   position: relative;
+  font-size: 1.5rem;
 }
-nav a {
-  padding: 10px;
-  position: relative;
+a {
   text-decoration: none;
   color: inherit;
 }
 
-.buy-container {
-  display: flex;
-  gap: 25px;
-}
-nav ul {
+ul {
   list-style: none;
-  display: flex;
-}
-#about h2 {
-  color: white;
-}
-#about p {
-  color: white;
-}
-#about {
-  position: relative;
-  border-radius: 4px;
-  padding: 50px;
-  background-color: deepskyblue;
-}
-section {
-  position: relative;
-  margin-top: 40px;
 }
 
+li {
+  padding-bottom: 10px;
+
+  font-size: 1.2rem;
+}
+nav ul {
+  display: flex;
+}
+
+nav a {
+  padding: 10px 20px;
+}
+
+/* #about {
+  position: relative;
+  background-color: white;
+  color: black;
+} */
+
+#author img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+section {
+  position: relative;
+  padding: 5px 30px;
+  min-height: 300px;
+}
+
+section:not(section:first-child) {
+  margin-top: 40px;
+}
+#about div:last-child {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-direction: column;
+}
+#about img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
 main {
   padding: 0 30px;
 }
+footer a {
+  background-color: white;
+  padding: 10px;
+  border-radius: 200px;
+  width: 40px;
+  height: 40px;
+}
 
+footer #socials {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  margin: auto;
+}
 footer {
-  padding: 40px 0 30px;
-  text-align: center;
+  padding: 30px;
+  background-color: black;
+}
+
+a {
+  transition: 0.2s ease;
+}
+a:hover {
+  background-color: white;
+  color: black;
 }
