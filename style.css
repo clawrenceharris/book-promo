@@ -161,7 +161,7 @@ main {
   padding: 0 30px;
 }
 footer a {
-  background-color: white;
+  background-color: var(--secondary-color);
   padding: 10px;
   border-radius: 200px;
   width: 40px;
