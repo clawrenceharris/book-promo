@@ -180,8 +180,11 @@ footer #socials {
 footer {
   padding: 30px;
   display: flex;
+  text-decoration: underline;
+  font-family: "Cormorant Garamond";
   flex-direction: column;
   background-color: black;
+  font-weight: 600;
 }
 
 a {
