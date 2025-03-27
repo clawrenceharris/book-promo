@@ -206,7 +206,9 @@ a:hover {
     width: 580px;
     bottom: -30%;
   }
-
+  nav a {
+    margin: 0 30px;
+  }
   .flex-container {
     display: flex;
     gap: 30px;
