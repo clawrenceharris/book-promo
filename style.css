@@ -31,7 +31,7 @@ h1 {
   margin-bottom: 10px;
   text-align: center;
   font-family: "Cormorant Garamond", serif;
-  display: block;
+  /* display: block; */
 }
 p {
   font-size: 165px;
@@ -70,7 +70,9 @@ p {
 }
 
 header div {
-  width: 100%;
+  text-wrap: nowrap;
+  align-items: center;
+  min-width: 100%;
   margin: 5px 20px;
   background-color: var(--primary-color);
 }
@@ -87,15 +89,16 @@ header {
   top: 0;
   position: relative;
   align-items: center;
-  overflow: hidden;
+  overflow-y: hidden;
   grid-template-columns: repeat(2, 1fr);
   display: flex;
   flex-direction: column;
-  width: 100%;
+  min-width: 100%;
 }
 header img {
   position: absolute;
-  bottom: -17%;
+  bottom: -15%;
+  width: clamp(300px, 200px, 300px);
 }
 
 nav {
@@ -122,6 +125,9 @@ a {
 
 ul {
   list-style: none;
+}
+header span {
+  display: block;
 }
 
 li {
@@ -196,4 +202,9 @@ a {
 a:hover {
   background-color: white;
   color: var(--secondary-color);
+}
+@media only screen and(min-width:678px) {
+  header span {
+    display: unset;
+  }
 }
