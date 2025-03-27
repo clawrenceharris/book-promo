@@ -28,10 +28,6 @@ h1 {
   text-align: center;
   font-family: "Cormorant Garamond", serif;
 }
-p {
-  font-size: 165px;
-}
-
 h2 {
   font-weight: 500;
   font-family: "Cormorant Garamond";
@@ -70,6 +66,10 @@ header div {
   min-width: 80%;
   background-color: var(--primary-color);
 }
+header p {
+  margin: 15px 40px;
+  align-self: self-end;
+}
 header span {
   letter-spacing: 15px;
   display: block;
@@ -92,7 +92,7 @@ header {
 header img {
   position: absolute;
   bottom: -15%;
-  width: clamp(300px, 200px, 300px);
+  width: 370px;
 }
 
 nav {
@@ -195,5 +195,14 @@ a:hover {
 @media only screen and (min-width: 768px) {
   header span {
     display: unset;
+  }
+
+  header p {
+    align-self: center;
+  }
+
+  header img {
+    width: 580px;
+    bottom: -30%;
   }
 }
