@@ -68,6 +68,7 @@ header div {
   text-wrap: nowrap;
   align-items: center;
   min-width: 80%;
+  padding: 0 40px;
   background-color: var(--primary-color);
 }
 header p {
