@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: clamp(4.4rem, 6vw, 5vw);
   margin-bottom: 10px;
   text-align: center;
   font-family: "Cormorant Garamond", serif;
@@ -68,7 +68,6 @@ header div {
 }
 header p {
   margin: 15px 40px;
-  align-self: self-end;
 }
 header span {
   letter-spacing: 15px;
@@ -79,19 +78,16 @@ header span {
 }
 header {
   z-index: 99;
-  height: 68vh;
-  top: 0;
+  height: 80vh;
   position: relative;
   align-items: center;
   overflow-y: hidden;
-  grid-template-columns: repeat(2, 1fr);
   display: flex;
   flex-direction: column;
-  min-width: 100%;
 }
 header img {
   position: absolute;
-  bottom: -15%;
+  bottom: -19%;
   width: 370px;
 }
 
@@ -105,12 +101,16 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 30px 0;
-  background-color: black;
+  background-color: #00000060;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  transition: 0.2s ease;
+}
+
+nav:hover {
+  background-color: #000000e8;
 }
 nav li {
   position: relative;
-  font-size: 1.5rem;
 }
 a {
   text-decoration: none;
@@ -144,19 +144,14 @@ nav a {
 }
 
 section {
-  position: relative;
   padding: 20px 30px;
-  min-height: 300px;
+  margin-bottom: 30px;
 }
 
 section:not(section:first-child) {
   margin-top: 40px;
 }
-#about div:last-child {
-  display: flex;
-  flex-direction: column-reverse;
-  flex-direction: column;
-}
+
 #about img {
   max-width: 100%;
   height: auto;
@@ -200,9 +195,17 @@ a:hover {
   header p {
     align-self: center;
   }
-
   header img {
     width: 580px;
     bottom: -30%;
+  }
+
+  .flex-container {
+    display: flex;
+    gap: 30px;
+  }
+
+  .flex-container img {
+    width: 350px;
   }
 }
