@@ -78,7 +78,7 @@ header span {
 }
 header {
   z-index: 99;
-  height: 80vh;
+  max-height: 80vh;
   position: relative;
   align-items: center;
   overflow-y: hidden;
@@ -191,7 +191,9 @@ a:hover {
   header span {
     display: unset;
   }
-
+  header {
+    height: 70vh;
+  }
   header p {
     align-self: center;
   }
